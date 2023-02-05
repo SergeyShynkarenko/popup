@@ -31,7 +31,8 @@
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: flex-end;
+  // align-items: flex-end;
+  align-items: center;
   // display: grid;
   // align-items: flex-end;
   overflow: hidden;
@@ -41,7 +42,7 @@
   opacity: 0;
 
   /* === Effect 3 === */
-  perspective: 1000px;
+  // perspective: 1000px;
 
   &__content {
     position: relative;
@@ -55,10 +56,10 @@
     transition: all 0.3s;
 
     /* === Effect 1 === */
-    // transform: translateY(10%);
+    transform: translateY(10%);
 
     /* === Effect 2 === */
-    transform: scale(0.5) translateY(10%);
+    // transform: scale(0.5) translateY(10%);
 
     /* === Effect 3 === */
     // transform-origin: 50% 100%;
@@ -94,10 +95,10 @@
 
 .show-modal .modal__content {
   /* === Effect 1 === */
-  // transform: translateY(0);
+  transform: translateY(0);
 
   /* === Effect 2 === */
-  transform: scale(1) translateY(0);
+  // transform: scale(1) translateY(0);
 
   /* === Effect 3 === */
   // transform: rotateX(0) scale(1) translateY(0);
