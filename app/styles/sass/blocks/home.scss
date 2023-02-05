@@ -1,0 +1,104 @@
+/*=============== MODAL ===============*/
+.wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // display: grid;
+  // place-items: center;
+}
+
+.button {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  padding: 1rem 1.25rem;
+  border-radius: 0.5rem;
+  border: 1px solid black;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: white;
+    color: #000;
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #c2c2d6;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  // display: grid;
+  // align-items: flex-end;
+  overflow: hidden;
+  transition: all 0.3s;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+
+  /* === Effect 3 === */
+  perspective: 1000px;
+
+  &__content {
+    position: relative;
+    background-color: white;
+    text-align: center;
+    padding: 3rem 2rem 2rem;
+    border-radius: 1rem 1rem 0 0;
+    margin: auto;
+    width: 380px;
+    border-radius: 1.25rem;
+    transition: all 0.3s;
+
+    /* === Effect 1 === */
+    // transform: translateY(10%);
+
+    /* === Effect 2 === */
+    transform: scale(0.5) translateY(10%);
+
+    /* === Effect 3 === */
+    // transform-origin: 50% 100%;
+    // transform: rotateX(65deg) scale(0.75) translateY(10%);
+  }
+
+  &__title {
+    font-size: 21px;
+    color: black;
+    font-weight: 500;
+  }
+
+  &__description {
+    margin-bottom: 1.5rem;
+  }
+
+  &__close {
+    display: block;
+    margin: 1rem auto 0;
+    background-color: black;
+    border-radius: 0.25rem;
+    color: white;
+    font-weight: 500;
+    border: none;
+  }
+}
+
+/* Show modal */
+.show-modal {
+  visibility: visible;
+  opacity: 1;
+}
+
+.show-modal .modal__content {
+  /* === Effect 1 === */
+  // transform: translateY(0);
+
+  /* === Effect 2 === */
+  transform: scale(1) translateY(0);
+
+  /* === Effect 3 === */
+  // transform: rotateX(0) scale(1) translateY(0);
+}
